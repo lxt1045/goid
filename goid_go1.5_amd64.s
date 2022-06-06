@@ -29,3 +29,10 @@ TEXT ·Get(SB),NOSPLIT,$0-8
 	MOVQ g_goid(R14), R13
 	MOVQ R13, ret+0(FP)
 	RET
+
+// func GetDefer() uintptr
+TEXT ·GetDefer(SB),NOSPLIT,$0-8
+	MOVQ (TLS), R14
+	MOVQ g__defer(R14), R13
+	MOVQ R13, ret+0(FP)
+	RET

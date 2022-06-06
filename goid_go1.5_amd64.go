@@ -21,3 +21,5 @@
 package goid
 
 func Get() int64
+
+func GetDefer() uintptr
